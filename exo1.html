@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>EXO 1 22 JUIN</title>
+
+    <!-- Méthode 2 -->
+    <script type="text/javascript">
+        function maFonction() {
+            alert("Hello World!!")
+        }
+
+        /*le nombre entré quand la fonction check est appelé est stocké et affiché dans la console*/
+        function check() {
+            var nbr;
+            nbr = Number(document.getElementById("myInput").value);
+            console.log(nbr) 
+        }
+    </script>
+
+    <!-- Méthode 3 -->
+    <script src="exo1.js"></script>
+
+
+
+</head>
+
+<body>
+    <!-- Méthode 1 -->
+    <button onclick="alert('Hello World!');">Cliquer ici - methode 1</button>
+
+    <br><br><br>
+
+    <!-- Méthode 2 -->
+    <button onclick="maFonction()"> Cliquer ici - methode 2</button>
+    <br>
+    Entrez un nombre : <input id="myInput">
+    <button onclick="check()">Vérifier</button>
+
+    <br><br><br>
+    <!-- Méthode 3 -->
+    <button onclick="maFonction2()"> Cliquer ici - methode 3</button>
+
+
+    <br><br><br>
+    <!-- Tests variables -->
+    <button onclick="test()"> Cliquer ici - test 1 variables</button>
+    <br>
+    <button onclick="test2()"> Cliquer ici - test 1 variables</button>
+
+</body>
