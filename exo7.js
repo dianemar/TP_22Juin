@@ -11,7 +11,6 @@ function bouillir(){
     }
 }
 
-
 function compter100_for(){
     for(var i=1; i<=100; i++){
         console.log(i);
@@ -28,6 +27,88 @@ function compter100_while(){
     }
 }
 //compter100_while();
+
+//Dessin
+// Tracer une ligne horizontale
+function LigneHoriz(longueur){
+    document.write('<tr>');
+    //document.write('<table border="1">');
+    for (var i=0; i<longueur; i++){
+        document.write('<td>' + "*");
+    }
+    document.write('</tr>');
+}
+
+function LigneHorizVide(longueur){
+    document.write('<tr>');
+    //document.write('<table border="1">');
+    for (var i=0; i<longueur; i++){
+        document.write('<td>' + " ");
+    }
+    document.write('</tr>');
+}
+
+
+// Tracer une ligne verticale
+function LigneVert(hauteur){
+        document.write('<table>');
+    for (var i=0; i<hauteur; i++){
+        document.write('<tr>' + "<td>" + "*" + "</td>" + "</tr>");
+    }
+    document.write('</table>');
+}
+function LigneVertVide(hauteur){
+    document.write('<table>');
+for (var i=0; i<hauteur; i++){
+    document.write('<tr>' + "<td>" + " " + "</td>" + "</tr>");
+}
+document.write('</table>');
+}
+
+// Tracer un carré plein
+function Carre_Plein(){
+    var cote = Number(document.getElementById("carre").value);
+    document.write('<table>');
+    for (var i=0; i<cote; i++){
+        LigneHoriz(cote);
+    }
+    document.write('</table>');
+}
+// Tracer un carré creu
+function Carre_Creu(){
+    var cote = Number(document.getElementById("carre").value);
+    document.write('<table cellpadding="5" border="1">');
+
+    // je parcours les lignes
+    for(var i =0; i<cote; i++){
+        if(i==0 || i == (cote-1)){
+            LigneHoriz(cote);
+        }
+        else{
+            // les lignes qui ne sont ni la 1ere ni la dernière
+            document.write('<tr>');
+            for (var j=0; j<cote; j++){
+                if(j==0 || j==(cote-1)){
+                    document.write('<td>' + "*");
+                }
+                else {
+                    document.write('<td>' + " ");
+                } 
+            }
+            document.write('</tr>');
+        }
+    }
+    document.write('</table>');
+}
+
+// Tracer un rectangle
+function Rectangle_Plein(longueur, hauteur){
+    document.write('<table>');
+    for (var i=0; i<hauteur; i++){
+        LigneHoriz(longueur);
+    }
+    document.write('</table>');
+}
 
 /*Question 2*/
 
